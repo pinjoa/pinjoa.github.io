@@ -1,0 +1,15 @@
+/* TEAM */
+    Name: Joao Carlos, JCLAB
+    Contact: https://bitminho.com/live/lp/mensagem/mensagem.html?aa=from%20humans.txt
+    Twitter: @joaojclab
+    Location: Braga, Portugal.
+
+/* THANKS */
+
+/* SITE */
+    Last update: 2020/05/05
+    Language: Portugues
+    Standards: HTML5, CSS, JavaScript
+    Doctype: HTML
+    Components: jQuery
+    Software: Visual Studio Code, Notepad++, FileZilla, GIMP
