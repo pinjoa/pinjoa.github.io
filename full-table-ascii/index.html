@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="application-name"
+      content="ASCII table, the complete table of ASCII characters"
+    />
+    <title>ASCII table, the complete table of ASCII characters</title>
+    <meta
+      name="description"
+      content="ASCII table, The complete table of ASCII characters, codes, symbols and signs, American Standard Code for Information Interchange"
+    />
+    <meta
+      name="keywords"
+      content="ascii, ascii table, code ascii, ascii character"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        width: 90%;
+        margin: 40px auto;
+        font-family: "trebuchet MS", "Lucida sans", Arial;
+        font-size: 14px;
+        color: white;
+        background-color: black;
+      }
+      a {
+      }
+
+      a:link {
+        color: white;
+      }
+
+      a:visited {
+        color: white;
+      }
+
+      a:focus {
+        text-decoration: none;
+        color: white;
+      }
+
+      a:hover {
+        text-decoration: none;
+        color: white;
+      }
+
+      a:active {
+        color: white;
+      }
+
+      table {
+        *border-collapse: collapse; /* IE7 and lower */
+        border-spacing: 0;
+        width: 100%;
+      }
+
+      .bordered {
+        width: 600px;
+        border: solid #ccc 1px;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        -webkit-box-shadow: 0 1px 1px #ccc;
+        -moz-box-shadow: 0 1px 1px #ccc;
+        box-shadow: 0 1px 1px #ccc;
+      }
+
+      .bordered tr:hover {
+        background: #fbf8e9;
+        -o-transition: all 0.1s ease-in-out;
+        -webkit-transition: all 0.1s ease-in-out;
+        -moz-transition: all 0.1s ease-in-out;
+        -ms-transition: all 0.1s ease-in-out;
+        transition: all 0.1s ease-in-out;
+        color: rgb(54, 54, 54);
+      }
+
+      .bordered td,
+      .bordered th {
+        border-left: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+
+      .bordered th {
+        background-color: #dce9f9;
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          from(#ebf3fc),
+          to(#dce9f9)
+        );
+        background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+        background-image: -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+        background-image: -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+        background-image: -o-linear-gradient(top, #ebf3fc, #dce9f9);
+        background-image: linear-gradient(top, #ebf3fc, #dce9f9);
+        -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+        -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+        border-top: none;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+        color: rgb(54, 54, 54);
+      }
+
+      .bordered td:first-child,
+      .bordered th:first-child {
+        border-left: none;
+      }
+
+      .bordered th:first-child {
+        -moz-border-radius: 6px 0 0 0;
+        -webkit-border-radius: 6px 0 0 0;
+        border-radius: 6px 0 0 0;
+      }
+
+      .bordered th:last-child {
+        -moz-border-radius: 0 6px 0 0;
+        -webkit-border-radius: 0 6px 0 0;
+        border-radius: 0 6px 0 0;
+      }
+
+      .bordered th:only-child {
+        -moz-border-radius: 6px 6px 0 0;
+        -webkit-border-radius: 6px 6px 0 0;
+        border-radius: 6px 6px 0 0;
+      }
+
+      .bordered tr:last-child td:first-child {
+        -moz-border-radius: 0 0 0 6px;
+        -webkit-border-radius: 0 0 0 6px;
+        border-radius: 0 0 0 6px;
+      }
+
+      .bordered tr:last-child td:last-child {
+        -moz-border-radius: 0 0 6px 0;
+        -webkit-border-radius: 0 0 6px 0;
+        border-radius: 0 0 6px 0;
+      }
+
+      .bordered .cell-pointer {
+        text-align: center;
+        font-weight: bolder;
+        border: 1px solid yellow;
+      }
+
+      .bordered .cell-pointer:hover {
+        cursor: pointer;
+      }
+
+      /* The navigation bar */
+      .navbar {
+        overflow: hidden;
+        background-color: #333;
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        width: 90%; /* Full width */
+      }
+
+      /* Links inside the navbar */
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      /* Change background on mouse-over */
+      .navbar a:hover {
+        background: #ddd;
+        color: black;
+      }
+
+      /* Main content */
+      .main {
+        margin-top: 40px; /* Add a top margin to avoid content overlay */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a href="#asciicontrol">ASCII control characters</a>
+      <a href="#asciiprintable">ASCII printable characters</a>
+      <a href="#asciiextended">ASCII extended characters</a>
+      <a href="#instructions">Copy symbols to clipboard</a>
+      <a href="#asciihistory">Some context about ASCII</a>
+    </div>
+
+    <div class="main">
+      <div id="top">
+        <p>&nbsp;<br />&nbsp;</p>
+        <h1>
+          The complete table of ASCII characters, codes, symbols and signs,
+          American Standard Code for Information Interchange, The complete ASCII
+          table, characters
+        </h1>
+      </div>
+
+      <div id="asciihistory">
+        <p>&nbsp;<br />&nbsp;</p>
+        <h2>Brief History of ASCII Code</h2>
+        <ol>
+          <li>Origins and Early Development:</li>
+          <ul>
+            <li>
+              In the 1960s, as computers began to communicate electronically,
+              the need arose for a common character encoding format.
+            </li>
+            <li>
+              Before ASCII, different computer manufacturers used their own
+              character sets, leading to compatibility issues.
+            </li>
+            <li>
+              In 1961, Bob Bemer of IBM proposed a common code, leading to the
+              formation of the X3.4 committee.
+            </li>
+            <li>
+              On June 17, 1963, ASCII (American Standard Code for Information
+              Interchange) was approved as the standard.
+            </li>
+          </ul>
+          <li>Initial Challenges and Revisions:</li>
+          <ul>
+            <li>
+              Despite approval, ASCII didn't gain widespread acceptance due to
+              IBM's use of EBCDIC (Extended Binary Coded Decimal Interchange
+              Code) in its computers.
+            </li>
+            <li>
+              Revisions were issued in 1965 and 1967 to improve compatibility.
+            </li>
+            <li>
+              In 1968, U.S. President Lyndon B. Johnson mandated that federal
+              systems be ASCII-compatible.
+            </li>
+          </ul>
+          <li>ASCII's Impact and Evolution:</li>
+          <ul>
+            <li>
+              Originally developed for teleprinters, ASCII found broader
+              application in personal computers (PCs) from 1981 onward.
+            </li>
+            <li>
+              ASCII uses seven-digit binary numbers, representing 128 different
+              characters.
+            </li>
+            <li>
+              Its adoption paved the way for seamless communication across
+              diverse computer systems.
+            </li>
+          </ul>
+          <li>Some resources:</li>
+          <ul>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/ASCII" target="_blank">
+                Wikipedia - ASCII
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.iana.org/assignments/character-sets/character-sets.xhtml"
+                target="_blank"
+                >IANA - Character Sets</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://en.wikipedia.org/wiki/Extended_ASCII"
+                target="_blank"
+                >Wikipedia - Extended ASCII</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://en.wikipedia.org/wiki/Windows-1252"
+                target="_blank"
+                >Wikipedia - Windows-1252</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/CP1252.TXT"
+                target="_blank"
+                >cp1252 to Unicode table</a
+              >
+            </li>
+            <li>
+              <a href="https://www.britannica.com/topic/ASCII" target="_blank">
+                Britannica (ASCII | Definition, History, Trivia, & Facts)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://learn.sparkfun.com/tutorials/ascii/all"
+                target="_blank"
+              >
+                Sparkfun Learn
+              </a>
+            </li>
+          </ul>
+        </ol>
+      </div>
+
+      <div id="instructions">
+        <p>&nbsp;<br />&nbsp;</p>
+        <h2>-> Instructions 📋</h2>
+        <table class="bordered">
+          <thead>
+            <tr>
+              <th><strong>NOTE: 📋</strong></th>
+            </tr>
+          </thead>
+          <tr>
+            <td>
+              <ul>
+                <li><strong>Copying to Clipboard: 📋</strong></li>
+                <ul>
+                  <li>
+                    Locate the yellow cell within either a printable or extended
+                    table.
+                  </li>
+                  <li>Click on the yellow cell to select its contents.</li>
+                </ul>
+                <li><strong>Yellow Cells in Tables:</strong></li>
+                <ul>
+                  <li>
+                    The yellow cells serve as the focal point for copying.
+                  </li>
+                  <li>These cells contain data you want to save or share.</li>
+                </ul>
+                <li>
+                  <strong
+                    >Remember, clicking the yellow cell is the key! 📋</strong
+                  >
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="asciicontrol">
+        <p>&nbsp;<br />&nbsp;</p>
+        <h2>-> ASCII control characters non printable</h2>
+        <table class="bordered">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Value</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>00</td>
+            <td>NULL</td>
+            <td>Null character</td>
+          </tr>
+          <tr>
+            <td>01</td>
+            <td>SOH</td>
+            <td>Start of Header</td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>STX</td>
+            <td>Start of Text</td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>ETX</td>
+            <td>End of Text, hearts card suit</td>
+          </tr>
+          <tr>
+            <td>04</td>
+            <td>EOT</td>
+            <td>End of Transmission, diamonds card suit</td>
+          </tr>
+          <tr>
+            <td>05</td>
+            <td>ENQ</td>
+            <td>Enquiry, clubs card suit</td>
+          </tr>
+          <tr>
+            <td>06</td>
+            <td>ACK</td>
+            <td>Acknowledgement, spade card suit</td>
+          </tr>
+          <tr>
+            <td>07</td>
+            <td>BEL</td>
+            <td>Bell</td>
+          </tr>
+          <tr>
+            <td>08</td>
+            <td>BS</td>
+            <td>Backspace</td>
+          </tr>
+          <tr>
+            <td>09</td>
+            <td>HT</td>
+            <td>Horizontal Tab</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>LF</td>
+            <td>Line feed</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>VT</td>
+            <td>Vertical Tab, male symbol, symbol for Mars</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>FF</td>
+            <td>Form feed, female symbol, symbol for Venus</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>CR</td>
+            <td>Carriage return</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>SO</td>
+            <td>Shift Out</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>SI</td>
+            <td>Shift In</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>DLE</td>
+            <td>Data link escape</td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>DC1</td>
+            <td>Device control 1</td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>DC2</td>
+            <td>Device control 2</td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td>DC3</td>
+            <td>Device control 3</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>DC4</td>
+            <td>Device control 4</td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td>NAK</td>
+            <td>NAK Negative-acknowledge</td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>SYN</td>
+            <td>Synchronous idle</td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td>ETB</td>
+            <td>End of trans. block</td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td>CAN</td>
+            <td>Cancel</td>
+          </tr>
+          <tr>
+            <td>25</td>
+            <td>EM</td>
+            <td>End of medium</td>
+          </tr>
+          <tr>
+            <td>26</td>
+            <td>SUB</td>
+            <td>Substitute</td>
+          </tr>
+          <tr>
+            <td>27</td>
+            <td>ESC</td>
+            <td>Escape</td>
+          </tr>
+          <tr>
+            <td>28</td>
+            <td>FS</td>
+            <td>File separator</td>
+          </tr>
+          <tr>
+            <td>29</td>
+            <td>GS</td>
+            <td>Group separator</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>RS</td>
+            <td>Record separator</td>
+          </tr>
+          <tr>
+            <td>31</td>
+            <td>US</td>
+            <td>Unit separator</td>
+          </tr>
+          <tr>
+            <td>127</td>
+            <td>DEL</td>
+            <td>Delete</td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="asciiprintable">
+        <p>&nbsp;<br />&nbsp;</p>
+        <h2>-> ASCII printable characters: alphanumeric, symbols and signs</h2>
+        <table class="bordered">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Value</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>32</td>
+            <td>space</td>
+            <td>Space</td>
+          </tr>
+          <tr>
+            <td>33</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">!</td>
+            <td>Exclamation mark</td>
+          </tr>
+          <tr>
+            <td>34</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">"</td>
+            <td>Double quotes ; Quotation mark ; speech marks</td>
+          </tr>
+          <tr>
+            <td>35</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">#</td>
+            <td>Number sign</td>
+          </tr>
+          <tr>
+            <td>36</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">$</td>
+            <td>Dollar sign</td>
+          </tr>
+          <tr>
+            <td>37</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">%</td>
+            <td>Percent sign</td>
+          </tr>
+          <tr>
+            <td>38</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">&</td>
+            <td>Ampersand</td>
+          </tr>
+          <tr>
+            <td>39</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">'</td>
+            <td>Single quote or Apostrophe</td>
+          </tr>
+          <tr>
+            <td>40</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">(</td>
+            <td>round brackets or parentheses, opening round bracket</td>
+          </tr>
+          <tr>
+            <td>41</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">)</td>
+            <td>parentheses or round brackets, closing parentheses</td>
+          </tr>
+          <tr>
+            <td>42</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">*</td>
+            <td>Asterisk</td>
+          </tr>
+          <tr>
+            <td>43</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">+</td>
+            <td>Plus sign</td>
+          </tr>
+          <tr>
+            <td>44</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">,</td>
+            <td>Comma</td>
+          </tr>
+          <tr>
+            <td>45</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">-</td>
+            <td>Hyphen , minus sign</td>
+          </tr>
+          <tr>
+            <td>46</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">.</td>
+            <td>Dot, full stop</td>
+          </tr>
+          <tr>
+            <td>47</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">/</td>
+            <td>Slash , forward slash , fraction bar , division slash</td>
+          </tr>
+          <tr>
+            <td>48</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">0</td>
+            <td>number zero</td>
+          </tr>
+          <tr>
+            <td>49</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">1</td>
+            <td>number one</td>
+          </tr>
+          <tr>
+            <td>50</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">2</td>
+            <td>number two</td>
+          </tr>
+          <tr>
+            <td>51</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">3</td>
+            <td>number three</td>
+          </tr>
+          <tr>
+            <td>52</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">4</td>
+            <td>number four</td>
+          </tr>
+          <tr>
+            <td>53</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">5</td>
+            <td>number five</td>
+          </tr>
+          <tr>
+            <td>54</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">6</td>
+            <td>number six</td>
+          </tr>
+          <tr>
+            <td>55</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">7</td>
+            <td>number seven</td>
+          </tr>
+          <tr>
+            <td>56</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">8</td>
+            <td>number eight</td>
+          </tr>
+          <tr>
+            <td>57</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">9</td>
+            <td>number nine</td>
+          </tr>
+          <tr>
+            <td>58</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">:</td>
+            <td>Colon</td>
+          </tr>
+          <tr>
+            <td>59</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">;</td>
+            <td>Semicolon</td>
+          </tr>
+          <tr>
+            <td>60</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">&lt;</td>
+            <td>Less-than sign</td>
+          </tr>
+          <tr>
+            <td>61</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">=</td>
+            <td>Equals sign</td>
+          </tr>
+          <tr>
+            <td>62</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">&gt;</td>
+            <td>Greater-than sign ; Inequality</td>
+          </tr>
+          <tr>
+            <td>63</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">?</td>
+            <td>Question mark</td>
+          </tr>
+          <tr>
+            <td>64</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">@</td>
+            <td>At sign</td>
+          </tr>
+          <tr>
+            <td>65</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">A</td>
+            <td>Capital letter A</td>
+          </tr>
+          <tr>
+            <td>66</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">B</td>
+            <td>Capital letter B</td>
+          </tr>
+          <tr>
+            <td>67</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">C</td>
+            <td>Capital letter C</td>
+          </tr>
+          <tr>
+            <td>68</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">D</td>
+            <td>Capital letter D</td>
+          </tr>
+          <tr>
+            <td>69</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">E</td>
+            <td>Capital letter E</td>
+          </tr>
+          <tr>
+            <td>70</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">F</td>
+            <td>Capital letter F</td>
+          </tr>
+          <tr>
+            <td>71</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">G</td>
+            <td>Capital letter G</td>
+          </tr>
+          <tr>
+            <td>72</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">H</td>
+            <td>Capital letter H</td>
+          </tr>
+          <tr>
+            <td>73</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">I</td>
+            <td>Capital letter I</td>
+          </tr>
+          <tr>
+            <td>74</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">J</td>
+            <td>Capital letter J</td>
+          </tr>
+          <tr>
+            <td>75</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">K</td>
+            <td>Capital letter K</td>
+          </tr>
+          <tr>
+            <td>76</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">L</td>
+            <td>Capital letter L</td>
+          </tr>
+          <tr>
+            <td>77</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">M</td>
+            <td>Capital letter M</td>
+          </tr>
+          <tr>
+            <td>78</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">N</td>
+            <td>Capital letter N</td>
+          </tr>
+          <tr>
+            <td>79</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">O</td>
+            <td>Capital letter O</td>
+          </tr>
+          <tr>
+            <td>80</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">P</td>
+            <td>Capital letter P</td>
+          </tr>
+          <tr>
+            <td>81</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Q</td>
+            <td>Capital letter Q</td>
+          </tr>
+          <tr>
+            <td>82</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">R</td>
+            <td>Capital letter R</td>
+          </tr>
+          <tr>
+            <td>83</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">S</td>
+            <td>Capital letter S</td>
+          </tr>
+          <tr>
+            <td>84</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">T</td>
+            <td>Capital letter T</td>
+          </tr>
+          <tr>
+            <td>85</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">U</td>
+            <td>Capital letter U</td>
+          </tr>
+          <tr>
+            <td>86</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">V</td>
+            <td>Capital letter V</td>
+          </tr>
+          <tr>
+            <td>87</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">W</td>
+            <td>Capital letter W</td>
+          </tr>
+          <tr>
+            <td>88</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">X</td>
+            <td>Capital letter X</td>
+          </tr>
+          <tr>
+            <td>89</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Y</td>
+            <td>Capital letter Y</td>
+          </tr>
+          <tr>
+            <td>90</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Z</td>
+            <td>Capital letter Z</td>
+          </tr>
+          <tr>
+            <td>91</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">[</td>
+            <td>square brackets or box brackets, opening bracket</td>
+          </tr>
+          <tr>
+            <td>92</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">\</td>
+            <td>Backslash , reverse slash</td>
+          </tr>
+          <tr>
+            <td>93</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">]</td>
+            <td>box brackets or square brackets, closing bracket</td>
+          </tr>
+          <tr>
+            <td>94</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">^</td>
+            <td>Circumflex accent or Caret</td>
+          </tr>
+          <tr>
+            <td>95</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">_</td>
+            <td>underscore , understrike , underbar or low line</td>
+          </tr>
+          <tr>
+            <td>96</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">`</td>
+            <td>Grave accent</td>
+          </tr>
+          <tr>
+            <td>97</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">a</td>
+            <td>Lowercase letter a , minuscule a</td>
+          </tr>
+          <tr>
+            <td>98</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">b</td>
+            <td>Lowercase letter b , minuscule b</td>
+          </tr>
+          <tr>
+            <td>99</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">c</td>
+            <td>Lowercase letter c , minuscule c</td>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">d</td>
+            <td>Lowercase letter d , minuscule d</td>
+          </tr>
+          <tr>
+            <td>101</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">e</td>
+            <td>Lowercase letter e , minuscule e</td>
+          </tr>
+          <tr>
+            <td>102</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">f</td>
+            <td>Lowercase letter f , minuscule f</td>
+          </tr>
+          <tr>
+            <td>103</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">g</td>
+            <td>Lowercase letter g , minuscule g</td>
+          </tr>
+          <tr>
+            <td>104</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">h</td>
+            <td>Lowercase letter h , minuscule h</td>
+          </tr>
+          <tr>
+            <td>105</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">i</td>
+            <td>Lowercase letter i , minuscule i</td>
+          </tr>
+          <tr>
+            <td>106</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">j</td>
+            <td>Lowercase letter j , minuscule j</td>
+          </tr>
+          <tr>
+            <td>107</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">k</td>
+            <td>Lowercase letter k , minuscule k</td>
+          </tr>
+          <tr>
+            <td>108</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">l</td>
+            <td>Lowercase letter l , minuscule l</td>
+          </tr>
+          <tr>
+            <td>109</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">m</td>
+            <td>Lowercase letter m , minuscule m</td>
+          </tr>
+          <tr>
+            <td>110</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">n</td>
+            <td>Lowercase letter n , minuscule n</td>
+          </tr>
+          <tr>
+            <td>111</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">o</td>
+            <td>Lowercase letter o , minuscule o</td>
+          </tr>
+          <tr>
+            <td>112</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">p</td>
+            <td>Lowercase letter p , minuscule p</td>
+          </tr>
+          <tr>
+            <td>113</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">q</td>
+            <td>Lowercase letter q , minuscule q</td>
+          </tr>
+          <tr>
+            <td>114</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">r</td>
+            <td>Lowercase letter r , minuscule r</td>
+          </tr>
+          <tr>
+            <td>115</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">s</td>
+            <td>Lowercase letter s , minuscule s</td>
+          </tr>
+          <tr>
+            <td>116</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">t</td>
+            <td>Lowercase letter t , minuscule t</td>
+          </tr>
+          <tr>
+            <td>117</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">u</td>
+            <td>Lowercase letter u , minuscule u</td>
+          </tr>
+          <tr>
+            <td>118</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">v</td>
+            <td>Lowercase letter v , minuscule v</td>
+          </tr>
+          <tr>
+            <td>119</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">w</td>
+            <td>Lowercase letter w , minuscule w</td>
+          </tr>
+          <tr>
+            <td>120</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">x</td>
+            <td>Lowercase letter x , minuscule x</td>
+          </tr>
+          <tr>
+            <td>121</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">y</td>
+            <td>Lowercase letter y , minuscule y</td>
+          </tr>
+          <tr>
+            <td>122</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">z</td>
+            <td>Lowercase letter z , minuscule z</td>
+          </tr>
+          <tr>
+            <td>123</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">{</td>
+            <td>braces or curly brackets, opening braces</td>
+          </tr>
+          <tr>
+            <td>124</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">|</td>
+            <td>vertical-bar, vbar, vertical line or vertical slash</td>
+          </tr>
+          <tr>
+            <td>125</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">}</td>
+            <td>curly brackets or braces, closing curly brackets</td>
+          </tr>
+          <tr>
+            <td>126</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">~</td>
+            <td>Tilde ; swung dash</td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="asciiextended">
+        <p>&nbsp;<br />&nbsp;</p>
+        <h2>-> ASCII extended characters</h2>
+        <table class="bordered">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Value</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>128</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Ç</td>
+            <td>Majuscule C-cedilla</td>
+          </tr>
+          <tr>
+            <td>129</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ü</td>
+            <td>letter u with umlaut or diaeresis , u-umlaut</td>
+          </tr>
+          <tr>
+            <td>130</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">é</td>
+            <td>letter e with acute accent or e-acute</td>
+          </tr>
+          <tr>
+            <td>131</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">â</td>
+            <td>letter a with circumflex accent or a-circumflex</td>
+          </tr>
+          <tr>
+            <td>132</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ä</td>
+            <td>letter a with umlaut or diaeresis , a-umlaut</td>
+          </tr>
+          <tr>
+            <td>133</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">à</td>
+            <td>letter a with grave accent</td>
+          </tr>
+          <tr>
+            <td>134</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">å</td>
+            <td>letter a with a ring</td>
+          </tr>
+          <tr>
+            <td>135</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ç</td>
+            <td>Minuscule c-cedilla</td>
+          </tr>
+          <tr>
+            <td>136</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ê</td>
+            <td>letter e with circumflex accent or e-circumflex</td>
+          </tr>
+          <tr>
+            <td>137</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ë</td>
+            <td>letter e with umlaut or diaeresis ; e-umlauts</td>
+          </tr>
+          <tr>
+            <td>138</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">è</td>
+            <td>letter e with grave accent</td>
+          </tr>
+          <tr>
+            <td>139</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ï</td>
+            <td>letter i with umlaut or diaeresis ; i-umlaut</td>
+          </tr>
+          <tr>
+            <td>140</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">î</td>
+            <td>letter i with circumflex accent or i-circumflex</td>
+          </tr>
+          <tr>
+            <td>141</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ì</td>
+            <td>letter i with grave accent</td>
+          </tr>
+          <tr>
+            <td>142</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Ä</td>
+            <td>letter A with umlaut or diaeresis ; A-umlaut</td>
+          </tr>
+          <tr>
+            <td>143</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Å</td>
+            <td>Capital letter A with a ring</td>
+          </tr>
+          <tr>
+            <td>144</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">É</td>
+            <td>Capital letter E with acute accent or E-acute</td>
+          </tr>
+          <tr>
+            <td>145</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">æ</td>
+            <td>Latin diphthong ae in lowercase</td>
+          </tr>
+          <tr>
+            <td>146</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Æ</td>
+            <td>Latin diphthong AE in uppercase</td>
+          </tr>
+          <tr>
+            <td>147</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ô</td>
+            <td>letter o with circumflex accent or o-circumflex</td>
+          </tr>
+          <tr>
+            <td>148</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ö</td>
+            <td>letter o with umlaut or diaeresis ; o-umlaut</td>
+          </tr>
+          <tr>
+            <td>149</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ò</td>
+            <td>letter o with grave accent</td>
+          </tr>
+          <tr>
+            <td>150</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">û</td>
+            <td>letter u with circumflex accent or u-circumflex</td>
+          </tr>
+          <tr>
+            <td>151</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ù</td>
+            <td>letter u with grave accent</td>
+          </tr>
+          <tr>
+            <td>152</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ÿ</td>
+            <td>Lowercase letter y with diaeresis</td>
+          </tr>
+          <tr>
+            <td>153</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Ö</td>
+            <td>Letter O with umlaut or diaeresis ; O-umlaut</td>
+          </tr>
+          <tr>
+            <td>154</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Ü</td>
+            <td>Letter U with umlaut or diaeresis ; U-umlaut</td>
+          </tr>
+          <tr>
+            <td>155</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ø</td>
+            <td>Lowercase slashed zero or empty set</td>
+          </tr>
+          <tr>
+            <td>156</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">£</td>
+            <td>Pound sign ; symbol for the pound sterling</td>
+          </tr>
+          <tr>
+            <td>157</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Ø</td>
+            <td>Uppercase slashed zero or empty set</td>
+          </tr>
+          <tr>
+            <td>158</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">×</td>
+            <td>Multiplication sign</td>
+          </tr>
+          <tr>
+            <td>159</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ƒ</td>
+            <td>Function sign ; f with hook sign ; florin sign</td>
+          </tr>
+          <tr>
+            <td>160</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">á</td>
+            <td>Lowercase letter a with acute accent or a-acute</td>
+          </tr>
+          <tr>
+            <td>161</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">í</td>
+            <td>Lowercase letter i with acute accent or i-acute</td>
+          </tr>
+          <tr>
+            <td>162</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ó</td>
+            <td>Lowercase letter o with acute accent or o-acute</td>
+          </tr>
+          <tr>
+            <td>163</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ú</td>
+            <td>Lowercase letter u with acute accent or u-acute</td>
+          </tr>
+          <tr>
+            <td>164</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ñ</td>
+            <td>eñe, enie, spanish letter enye, lowercase n with tilde</td>
+          </tr>
+          <tr>
+            <td>165</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Ñ</td>
+            <td>Spanish letter enye, uppercase N with tilde, EÑE, enie</td>
+          </tr>
+          <tr>
+            <td>166</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ª</td>
+            <td>feminine ordinal indicator</td>
+          </tr>
+          <tr>
+            <td>167</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">º</td>
+            <td>masculine ordinal indicator</td>
+          </tr>
+          <tr>
+            <td>168</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">¿</td>
+            <td>Inverted question marks</td>
+          </tr>
+          <tr>
+            <td>169</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">®</td>
+            <td>Registered trademark symbol</td>
+          </tr>
+          <tr>
+            <td>170</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">¬</td>
+            <td>Logical negation symbol</td>
+          </tr>
+          <tr>
+            <td>171</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">½</td>
+            <td>One half</td>
+          </tr>
+          <tr>
+            <td>172</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">¼</td>
+            <td>Quarter, one fourth</td>
+          </tr>
+          <tr>
+            <td>173</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">¡</td>
+            <td>Inverted exclamation marks</td>
+          </tr>
+          <tr>
+            <td>174</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">«</td>
+            <td>Angle quotes, guillemets, right-pointing quotation mark</td>
+          </tr>
+          <tr>
+            <td>175</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">»</td>
+            <td>Guillemets, angle quotes, left-pointing quotation marks</td>
+          </tr>
+          <tr>
+            <td>176</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">░</td>
+            <td>Graphic character, low density dotted</td>
+          </tr>
+          <tr>
+            <td>177</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">▒</td>
+            <td>Graphic character, medium density dotted</td>
+          </tr>
+          <tr>
+            <td>178</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">▓</td>
+            <td>Graphic character, high density dotted</td>
+          </tr>
+          <tr>
+            <td>179</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">│</td>
+            <td>Box drawing character single vertical line</td>
+          </tr>
+          <tr>
+            <td>180</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">┤</td>
+            <td>Box drawing character single vertical and left line</td>
+          </tr>
+          <tr>
+            <td>181</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Á</td>
+            <td>Capital letter A with acute accent or A-acute</td>
+          </tr>
+          <tr>
+            <td>182</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Â</td>
+            <td>Letter A with circumflex accent or A-circumflex</td>
+          </tr>
+          <tr>
+            <td>183</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">À</td>
+            <td>Letter A with grave accent</td>
+          </tr>
+          <tr>
+            <td>184</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">©</td>
+            <td>Copyright symbol</td>
+          </tr>
+          <tr>
+            <td>185</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">╣</td>
+            <td>Box drawing character double line vertical and left</td>
+          </tr>
+          <tr>
+            <td>186</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">║</td>
+            <td>Box drawing character double vertical line</td>
+          </tr>
+          <tr>
+            <td>187</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">╗</td>
+            <td>Box drawing character double line upper right corner</td>
+          </tr>
+          <tr>
+            <td>188</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">╝</td>
+            <td>Box drawing character double line lower right corner</td>
+          </tr>
+          <tr>
+            <td>189</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">¢</td>
+            <td>Cent symbol</td>
+          </tr>
+          <tr>
+            <td>190</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">¥</td>
+            <td>YEN and YUAN sign</td>
+          </tr>
+          <tr>
+            <td>191</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">┐</td>
+            <td>Box drawing character single line upper right corner</td>
+          </tr>
+          <tr>
+            <td>192</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">└</td>
+            <td>Box drawing character single line lower left corner</td>
+          </tr>
+          <tr>
+            <td>193</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">┴</td>
+            <td>Box drawing character single line horizontal and up</td>
+          </tr>
+          <tr>
+            <td>194</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">┬</td>
+            <td>Box drawing character single line horizontal down</td>
+          </tr>
+          <tr>
+            <td>195</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">├</td>
+            <td>Box drawing character single line vertical and right</td>
+          </tr>
+          <tr>
+            <td>196</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">─</td>
+            <td>Box drawing character single horizontal line</td>
+          </tr>
+          <tr>
+            <td>197</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">┼</td>
+            <td>Box drawing character single line horizontal vertical</td>
+          </tr>
+          <tr>
+            <td>198</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ã</td>
+            <td>Lowercase letter a with tilde or a-tilde</td>
+          </tr>
+          <tr>
+            <td>199</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Ã</td>
+            <td>Capital letter A with tilde or A-tilde</td>
+          </tr>
+          <tr>
+            <td>200</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">╚</td>
+            <td>Box drawing character double line lower left corner</td>
+          </tr>
+          <tr>
+            <td>201</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">╔</td>
+            <td>Box drawing character double line upper left corner</td>
+          </tr>
+          <tr>
+            <td>202</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">╩</td>
+            <td>Box drawing character double line horizontal and up</td>
+          </tr>
+          <tr>
+            <td>203</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">╦</td>
+            <td>Box drawing character double line horizontal down</td>
+          </tr>
+          <tr>
+            <td>204</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">╠</td>
+            <td>Box drawing character double line vertical and right</td>
+          </tr>
+          <tr>
+            <td>205</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">═</td>
+            <td>Box drawing character double horizontal line</td>
+          </tr>
+          <tr>
+            <td>206</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">╬</td>
+            <td>Box drawing character double line horizontal vertical</td>
+          </tr>
+          <tr>
+            <td>207</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">¤</td>
+            <td>Generic currency sign</td>
+          </tr>
+          <tr>
+            <td>208</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ð</td>
+            <td>Lowercase letter eth</td>
+          </tr>
+          <tr>
+            <td>209</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Ð</td>
+            <td>Capital letter Eth</td>
+          </tr>
+          <tr>
+            <td>210</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Ê</td>
+            <td>Letter E with circumflex accent or E-circumflex</td>
+          </tr>
+          <tr>
+            <td>211</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Ë</td>
+            <td>Letter E with umlaut or diaeresis, E-umlaut</td>
+          </tr>
+          <tr>
+            <td>212</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">È</td>
+            <td>Capital letter E with grave accent</td>
+          </tr>
+          <tr>
+            <td>213</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ı</td>
+            <td>Lowercase dot less i</td>
+          </tr>
+          <tr>
+            <td>214</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Í</td>
+            <td>Capital letter I with acute accent or I-acute</td>
+          </tr>
+          <tr>
+            <td>215</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Î</td>
+            <td>Letter I with circumflex accent or I-circumflex</td>
+          </tr>
+          <tr>
+            <td>216</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Ï</td>
+            <td>Letter I with umlaut or diaeresis ; I-umlaut</td>
+          </tr>
+          <tr>
+            <td>217</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">┘</td>
+            <td>Box drawing character single line lower right corner</td>
+          </tr>
+          <tr>
+            <td>218</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">┌</td>
+            <td>Box drawing character single line upper left corner</td>
+          </tr>
+          <tr>
+            <td>219</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">█</td>
+            <td>Block, graphic character</td>
+          </tr>
+          <tr>
+            <td>220</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">▄</td>
+            <td>Bottom half block</td>
+          </tr>
+          <tr>
+            <td>221</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">¦</td>
+            <td>Vertical broken bar</td>
+          </tr>
+          <tr>
+            <td>222</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Ì</td>
+            <td>Capital letter I with grave accent</td>
+          </tr>
+          <tr>
+            <td>223</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">▀</td>
+            <td>Top half block</td>
+          </tr>
+          <tr>
+            <td>224</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Ó</td>
+            <td>Capital letter O with acute accent or O-acute</td>
+          </tr>
+          <tr>
+            <td>225</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ß</td>
+            <td>Letter Eszett ; scharfes S or sharp S</td>
+          </tr>
+          <tr>
+            <td>226</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Ô</td>
+            <td>Letter O with circumflex accent or O-circumflex</td>
+          </tr>
+          <tr>
+            <td>227</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Ò</td>
+            <td>Capital letter O with grave accent</td>
+          </tr>
+          <tr>
+            <td>228</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">õ</td>
+            <td>Lowercase letter o with tilde or o-tilde</td>
+          </tr>
+          <tr>
+            <td>229</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Õ</td>
+            <td>Capital letter O with tilde or O-tilde</td>
+          </tr>
+          <tr>
+            <td>230</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">µ</td>
+            <td>Lowercase letter Mu ; micro sign or micron</td>
+          </tr>
+          <tr>
+            <td>231</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">þ</td>
+            <td>Lowercase letter Thorn</td>
+          </tr>
+          <tr>
+            <td>232</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Þ</td>
+            <td>Capital letter Thorn</td>
+          </tr>
+          <tr>
+            <td>233</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Ú</td>
+            <td>Capital letter U with acute accent or U-acute</td>
+          </tr>
+          <tr>
+            <td>234</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Û</td>
+            <td>Letter U with circumflex accent or U-circumflex</td>
+          </tr>
+          <tr>
+            <td>235</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Ù</td>
+            <td>Capital letter U with grave accent</td>
+          </tr>
+          <tr>
+            <td>236</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">ý</td>
+            <td>Lowercase letter y with acute accent</td>
+          </tr>
+          <tr>
+            <td>237</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">Ý</td>
+            <td>Capital letter Y with acute accent</td>
+          </tr>
+          <tr>
+            <td>238</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">¯</td>
+            <td>Macron symbol</td>
+          </tr>
+          <tr>
+            <td>239</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">´</td>
+            <td>Acute accent</td>
+          </tr>
+          <tr>
+            <td>240</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">≡</td>
+            <td>Congruence relation symbol</td>
+          </tr>
+          <tr>
+            <td>241</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">±</td>
+            <td>Plus-minus sign</td>
+          </tr>
+          <tr>
+            <td>242</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">‗</td>
+            <td>underline or underscore</td>
+          </tr>
+          <tr>
+            <td>243</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">¾</td>
+            <td>three quarters, three-fourths</td>
+          </tr>
+          <tr>
+            <td>244</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">¶</td>
+            <td>Paragraph sign or pilcrow ; end paragraph mark</td>
+          </tr>
+          <tr>
+            <td>245</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">§</td>
+            <td>Section sign</td>
+          </tr>
+          <tr>
+            <td>246</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">÷</td>
+            <td>The division sign ; Obelus</td>
+          </tr>
+          <tr>
+            <td>247</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">¸</td>
+            <td>cedilla</td>
+          </tr>
+          <tr>
+            <td>248</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">°</td>
+            <td>Degree symbol</td>
+          </tr>
+          <tr>
+            <td>249</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">¨</td>
+            <td>Diaresis</td>
+          </tr>
+          <tr>
+            <td>250</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">·</td>
+            <td>Interpunct or space dot</td>
+          </tr>
+          <tr>
+            <td>251</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">¹</td>
+            <td>Superscript one, exponent 1, first power</td>
+          </tr>
+          <tr>
+            <td>252</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">³</td>
+            <td>Superscript three, exponent 3, cube, third power</td>
+          </tr>
+          <tr>
+            <td>253</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">²</td>
+            <td>Superscript two, exponent 2, square, second power</td>
+          </tr>
+          <tr>
+            <td>254</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">■</td>
+            <td>black square</td>
+          </tr>
+          <tr>
+            <td>255</td>
+            <td class="cell-pointer" onclick="handleCellClick(this)">&nbsp;</td>
+            <td>nbsp, Non-breaking space or no-break space</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      function handleCellClick(cell) {
+        function handler(event) {
+          event.clipboardData.setData("text/plain", cell.innerText);
+          event.preventDefault();
+          document.removeEventListener("copy", handler, true);
+        }
+
+        document.addEventListener("copy", handler, true);
+        document.execCommand("copy");
+        //console.log(cell.innerText);
+      }
+    </script>
+  </body>
+</html>
