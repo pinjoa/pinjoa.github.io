@@ -25,7 +25,9 @@
         color: white;
         background-color: black;
       }
+
       a {
+        color: white;
       }
 
       a:link {
@@ -75,6 +77,32 @@
         -ms-transition: all 0.1s ease-in-out;
         transition: all 0.1s ease-in-out;
         color: rgb(54, 54, 54);
+      }
+
+      .bordered tr:hover a {
+        color: black;
+      }
+
+      .bordered tr:hover a:link {
+        color: black;
+      }
+
+      .bordered tr:hover a:visited {
+        color: black;
+      }
+
+      .bordered tr:hover a:focus {
+        text-decoration: none;
+        color: black;
+      }
+
+      .bordered tr:hover a:hover {
+        text-decoration: none;
+        color: black;
+      }
+
+      .bordered a:active {
+        color: black;
       }
 
       .bordered td,
@@ -152,16 +180,14 @@
         cursor: pointer;
       }
 
-      /* The navigation bar */
       .navbar {
         overflow: hidden;
         background-color: #333;
-        position: fixed; /* Set the navbar to fixed position */
-        top: 0; /* Position the navbar at the top of the page */
-        width: 90%; /* Full width */
+        position: fixed;
+        top: 0;
+        width: 90%;
       }
 
-      /* Links inside the navbar */
       .navbar a {
         float: left;
         display: block;
@@ -171,15 +197,22 @@
         text-decoration: none;
       }
 
-      /* Change background on mouse-over */
       .navbar a:hover {
         background: #ddd;
         color: black;
       }
 
-      /* Main content */
       .main {
-        margin-top: 40px; /* Add a top margin to avoid content overlay */
+        margin-top: 40px;
+      }
+
+      #message {
+        display: none;
+        background-color: #f44336;
+        color: white;
+        padding: 16px;
+        position: absolute;
+        z-index: 1;
       }
     </style>
   </head>
@@ -191,6 +224,8 @@
       <a href="#asciicontrol">➤ASCII control characters</a>
       <a href="#asciiprintable">➤ASCII printable characters</a>
       <a href="#asciiextended">➤ASCII extended characters</a>
+
+      <div id="message">Copied to clipboard!</div>
     </div>
 
     <div class="main">
@@ -1701,11 +1736,20 @@
     </div>
 
     <script>
+      function showMessage() {
+        var message = document.getElementById("message");
+        message.style.display = "block";
+        setTimeout(function () {
+          message.style.display = "none";
+        }, 1000);
+      }
+
       function handleCellClick(cell) {
         function handler(event) {
           event.clipboardData.setData("text/plain", cell.innerText);
           event.preventDefault();
           document.removeEventListener("copy", handler, true);
+          showMessage();
         }
 
         document.addEventListener("copy", handler, true);
