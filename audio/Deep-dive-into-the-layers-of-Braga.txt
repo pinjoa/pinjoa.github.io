@@ -1,2 +1,5 @@
-Deep-dive-into-the-layers-of-Braga.mp3
-need this file for https://github.com/pinjoa/Gen-AI-Capstone-2025Q1 project
+Deep-dive-into-the-layers-of-Braga.mp3 
+need this file for my projects: 
+- https://github.com/pinjoa/Gen-AI-Capstone-2025Q1
+- https://www.kaggle.com/code/pinjoa/genaicapstone2025q1-pinjoa
+ 
